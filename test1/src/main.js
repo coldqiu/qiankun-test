@@ -21,9 +21,11 @@ registerMicroApps([
     // },
     {
         name: 'child2',
-        entry: '//localhost:3002',
+        entry: import.meta.env.VITE_APP_ENTRY,
+        // entry: '//localhost:3002/app-child1',
         container: '#container',
-        activeRule: '/app-child2',
+        // activeRule: '/app-child1',
+        activeRule: '/app-child1',
     },
 
 ]);

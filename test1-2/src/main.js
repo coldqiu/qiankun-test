@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory,createWebHashHistory  } from 'vue-router'
 import { renderWithQiankun, qiankunWindow } from "vite-plugin-qiankun/es/helper";
 
 // import './style.css'
@@ -24,7 +24,10 @@ const routes = [
 // 暂时保持简单
 const router = createRouter({
     // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
-    history: createWebHistory('/'),
+    // history: createWebHistory('/'),
+    history: createWebHistory('/app-child1'),
+    // history: createWebHashHistory ('/#app-child1'),
+
     routes, // `routes: routes` 的缩写
 
 })
@@ -36,6 +39,7 @@ function render(props) {
     const { container } = props;
     const app = createApp(App)
     app.use(router)
+    console.log('router: ', router);
 
     const c = container
         ? container.querySelector("#child2-app")
