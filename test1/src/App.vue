@@ -8,7 +8,7 @@ import {
   MenuFoldOutlined,
   DownOutlined
 } from '@ant-design/icons-vue';
-import HelloWorld from './components/HelloWorld.vue'
+import micrApps from './micr-app'
 
 // selectedKeys: ref<string[]>(['1']),
 //       collapsed: ref<boolean>(false),
@@ -52,13 +52,11 @@ const collapsed = ref(false)
                 <template #overlay>
                   <a-menu>
                     <a-menu-item>
-                      <a href="javascript:;">1st menu item</a>
+                      <!-- <a href="javascript:;">Home</a> -->
+                      <router-link to="/">Home</router-link>
                     </a-menu-item>
-                    <a-menu-item>
-                      <a href="javascript:;">2nd menu item</a>
-                    </a-menu-item>
-                    <a-menu-item>
-                      <a href="javascript:;">3rd menu item</a>
+                    <a-menu-item v-for="item in micrApps" :key="item.index">
+                      <router-link :to="item.homeLink">{{ item.name }}</router-link>
                     </a-menu-item>
                   </a-menu>
                 </template>
@@ -72,6 +70,7 @@ const collapsed = ref(false)
         <div id="container"></div>
         <!-- <micro-app name='child1' url='http://localhost:3001/' baseroute='/child1' inline disableSandbox></micro-app>
         <micro-app name='child2' url='http://localhost:3002/' baseroute='/child2' inline disableSandbox></micro-app> -->
+        <router-view></router-view>
       </a-layout-content>
       <!-- <a-layout-footer class="mFooter">Footer</a-layout-footer> -->
     </a-layout>
