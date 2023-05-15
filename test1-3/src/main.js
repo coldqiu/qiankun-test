@@ -22,34 +22,32 @@ const router = createRouter({
 let root = undefined
 
 function render(props) {
-    console.log('render props: ', props);
+    console.log('child3 render props: ', props);
     const { container } = props;
     root = createApp(App)
     root.use(router)
-    console.log('router: ', router);
 
     const c = container
         ? container.querySelector("#child3-app")
         : document.getElementById("app")
 
-    console.log("c", c)
     root.mount(c)
 }
 
 renderWithQiankun({
     mount(props) {
-        console.log("vue3sub mount props", props);
+        console.log("child3 mount props", props);
         render(props);
     },
     bootstrap() {
-        console.log("bootstrap");
+        console.log("child3 bootstrap");
     },
     unmount(props) {
-        console.log("vue3sub unmount");
+        console.log("child3 unmount");
         root.unmount();
     },
     update(props) {
-        console.log("vue3sub update");
+        console.log("child3 update");
         console.log(props)
     },
 });
