@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
-import qiankun from 'vite-plugin-qiankun'
+// import qiankun from 'vite-plugin-qiankun'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,8 +19,8 @@ export default defineConfig({
   Components({
     resolvers: [AntDesignVueResolver()],
   }),
-  qiankun('child2')
-
+  // qiankun('child2'),
+  // qiankun('child3')
   ],
   server: {
     port: 3000

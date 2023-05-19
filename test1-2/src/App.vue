@@ -4,7 +4,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div>
-    <h1>child2</h1>
+    <h1>child2 App.vue</h1>
     <h2>router:</h2>
     <!-- <router-link to="./">Go to Home</router-link>
     <router-link to="./about">Go to About</router-link> -->

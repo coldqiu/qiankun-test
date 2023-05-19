@@ -5,7 +5,6 @@ export default [
         entry: import.meta.env.VITE_APP_CHILD2_ENTRY,
         container: '#container',
         activeRule: '/app-child2',
-        homeLink: '/app-child2/'
     },
     {
         name: 'child3',
@@ -13,7 +12,6 @@ export default [
         entry: import.meta.env.VITE_APP_CHILD3_ENTRY,
         container: '#container',
         activeRule: '/app-child3',
-        homeLink: '/app-child3/'
     }
 ]
 

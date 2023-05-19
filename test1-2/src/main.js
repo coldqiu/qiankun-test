@@ -13,7 +13,8 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory('/app-child2'),
+    // history: createWebHistory('/app-child2'),
+    history: createWebHistory('/child2'),
     routes, // `routes: routes` 的缩写
 
 })

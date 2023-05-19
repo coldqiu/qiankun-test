@@ -20,7 +20,10 @@
     "del:test": "run-p del:test1-1 del:test1-2",
     "del:main": "rimraf node_modules",
     "del:test1-1": "cd ../test1-1/ && rimraf node_modules",
-    "del:test1-2": "cd ../test1-2/ && rimraf node_modules"
+    "del:test1-2": "cd ../test1-2/ && rimraf node_modules",
+    "build:test1-2": "cd ../test1-2 && yarn build",
+    "build:test1-3": "cd ../test1-3 && yarn build",
+    "build-example": "run-s build build:test1-2 build:test1-3"
   },
   "dependencies": {
     "@micro-zoe/micro-app": "^0.8.11",

@@ -56,7 +56,7 @@ const collapsed = ref(false)
                       <router-link to="/">Home</router-link>
                     </a-menu-item>
                     <a-menu-item v-for="item in micrApps" :key="item.index">
-                      <router-link :to="item.homeLink">{{ item.name }}</router-link>
+                      <router-link :to="item.activeRule">{{ item.name }}</router-link>
                     </a-menu-item>
                   </a-menu>
                 </template>
