@@ -29,7 +29,7 @@ function render(props) {
 
     const c = container
         ? container.querySelector("#child3-app")
-        : document.getElementById("app")
+        : document.getElementById("child3-app")
 
     root.mount(c)
 }

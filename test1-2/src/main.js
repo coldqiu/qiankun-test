@@ -13,10 +13,9 @@ const routes = [
 ]
 
 const router = createRouter({
-    // history: createWebHistory('/app-child2'),
-    history: createWebHistory('/child2'),
+    history: createWebHistory('/app-child2'),
+    // history: createWebHistory('/child2'),
     routes, // `routes: routes` 的缩写
-
 })
 
 let root = undefined
@@ -29,7 +28,7 @@ function render(props) {
 
     const c = container
         ? container.querySelector("#child2-app")
-        : document.getElementById("app")
+        : document.getElementById("child2-app")
 
     root.mount(c)
 }
