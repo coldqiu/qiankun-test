@@ -17,10 +17,12 @@
     "dev:test1": "yarn dev",
     "dev:test1-2": "cd ../test1-2 && yarn dev",
     "dev:test1-3": "cd ../test1-3 && yarn dev",
-    "del:test": "run-p del:test1-1 del:test1-2",
+    "del:test": "run-p del:test1-1 del:test1-2 del:test1-3",
     "del:main": "rimraf node_modules",
     "del:test1-1": "cd ../test1-1/ && rimraf node_modules",
     "del:test1-2": "cd ../test1-2/ && rimraf node_modules",
+    "del:test1-3": "cd ../test1-3/ && rimraf node_modules",
+    "del:all": "npm-run-all del*",
     "build:test1-2": "cd ../test1-2 && yarn build",
     "build:test1-3": "cd ../test1-3 && yarn build",
     "build-example": "run-s build build:test1-2 build:test1-3"
